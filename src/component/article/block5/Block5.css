@@ -1,0 +1,274 @@
+.button2 {
+	margin: 10px;
+	height: auto;
+	cursor: pointer;
+	background-color: #f7770e;
+	font-size: 18px;
+	padding: 10px 14px;
+	border: none;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	color: white;
+}
+.button2:hover {
+	background-color: rgb(241, 241, 241);
+	border: 1px solid rgb(238, 4, 4);
+	color: #f7770e;
+}
+.button2:active {
+	background-color: rgb(253, 0, 0);
+	border: 1px solid rgb(255, 255, 255);
+	color: black;
+}
+.block5 {
+	animation: slideGradientRightBlock5 1.5s ease 0s 1 normal forwards;
+}
+@keyframes slideGradientRightBlock5 {
+	0% {
+		opacity: 0;
+		transform: translateX(-40px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"item1 item3 item4 item4 item4"
+		"item2 item3 item4 item4 item4";
+	grid-template-columns: 140px 140px 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+.item1 {
+	grid-area: item1;
+}
+.item2 {
+	grid-area: item2;
+}
+.item3 {
+	grid-area: item3;
+	display: grid;
+	margin: auto 0;
+}
+.item4 {
+	grid-area: item4;
+	display: grid;
+	color: #f7770e;
+	align-items: center;
+}
+
+.item3 .button2 {
+	background-color: rgb(255, 94, 0);
+	color: black;
+	font-weight: bold;
+}
+.item3 .button2:hover {
+	background-color: #fffefd;
+	color: black;
+	font-weight: bold;
+}
+.item3 .button2:active {
+	background-color: rgb(255, 18, 18);
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+.animate {
+	animation: slideGradientRightBlock5text 1.5s ease 0s 1 normal forwards;
+}
+@keyframes slideGradientRightBlock5text {
+	0% {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.area {
+	height: 855px;
+	width: 655px;
+	background-color: black;
+	border: 1px solid white;
+	position: relative;
+	margin: 25px;
+}
+
+.wall {
+	background-image: url("./img/brick-1.jpg");
+	background-size: 100px auto;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+.MyTank {
+	background-image: url("./img/MyTank.png");
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	position: relative;
+}
+.game-field {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	border: 1px solid black;
+}
+.bullet {
+	background: #fbff2c;
+	background-size: cover;
+	border-radius: 100%;
+	border: 2px solid #f7770e;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 10px;
+}
+.bullet3 {
+	background: #0fcc28;
+	background-size: cover;
+	border-radius: 100%;
+	border: 2px solid #044b0a;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 10px;
+}
+.bullet1 {
+	background: #c909f0;
+	background-size: cover;
+	border-radius: 100%;
+	border: 2px solid #4a0650;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 10px;
+}
+.bullet2 {
+	background: #0470ec;
+	background-size: cover;
+	border-radius: 100%;
+	border: 2px solid #013158;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 10px;
+}
+.EnemyTank1 {
+	background-image: url("./img/EnemyTank1.png");
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+.EnemyTank2 {
+	background-image: url("./img/EnemyTank2.png");
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+.EnemyTank3 {
+	background-image: url("./img/EnemyTank3.png");
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+.invisiblWall {
+	position: absolute;
+	left: -50px;
+	top: -100px;
+	border-radius: 30px;
+	height: 850px;
+	width: 50px;
+	background-color: #f7770e;
+	color: black;
+	animation: blockfix 4s ease 0s 1 normal forwards;
+	display: flex;
+	font-size: 28px;
+}
+.invisiblWall:hover {
+	cursor: pointer;
+}
+.invisiblWall p {
+	writing-mode: vertical-lr;
+	transform: rotate(183deg);
+
+	display: block;
+}
+.gameFlex span {
+	font-size: 20px;
+	color: red;
+}
+@keyframes blockfix {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes blockfix2 {
+	0% {
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+}
+.buttonGame {
+	width: 30%;
+	padding: 9px;
+	border-radius: 6px;
+	color: black;
+	background-color: #f7770e;
+	font-size: 20px;
+	transition: background-color 0.3s, transform 0.2s;
+	margin: 0 0 10px 0;
+}
+
+.buttonGame:hover {
+	background-color: #ff8a33;
+	cursor: pointer;
+}
+
+.buttonGame:active {
+	background-color: #cc5c1e;
+	transform: scale(0.96);
+}
+
+.gameFlex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.modalLose,
+.modalWin {
+	height: 300px;
+	width: 500px;
+	color: #e40000;
+	border-radius: 30px;
+	border: 8px solid #ec5808;
+	position: absolute;
+	transform: translate(-50%, -70%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	background-color: #041c30;
+	font-size: 48px;
+	animation: blockfix 2s ease 0s 1 normal forwards;
+	gap: 30px;
+}

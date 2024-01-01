@@ -1,0 +1,37 @@
+.todoFormContateiner {
+	margin: 30px 0;
+}
+.todoFormContateiner form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.todoFormContateiner input {
+	width: 430px;
+	max-width: 95%;
+	min-width: 250px;
+	height: 40px;
+	font-size: clamp(18px, 2vw, 22px);
+	margin: 0 20px 0 20px;
+}
+
+.todoFormContateiner button {
+	margin-left: 20px;
+	height: 50px;
+	cursor: pointer;
+	background-color: #f7770e;
+	font-size: clamp(16px, 2vw, 22px);
+}
+
+.todoFormContateiner button:hover {
+	background-color: #e0dfdd;
+}
+
+.todoFormContateiner input,
+button {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+}

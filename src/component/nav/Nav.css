@@ -1,0 +1,30 @@
+.navig {
+	border-right: 1px solid #f7770e;
+	color: #f7770e;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	font-size: clamp(28px, 3vw, 45px);
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 3px;
+	z-index: 2;
+}
+.navig li {
+	margin-top: 18px;
+	border-right: none;
+	list-style: none;
+	transition: color 0.3s ease, text-shadow 0.5s ease;
+	z-index: 2;
+}
+.navig li:hover {
+	color: white;
+	z-index: 2;
+}
+.navig li:active {
+	color: rgb(255, 0, 0);
+	text-shadow: 1px 1px 0px #f7770e, 0px -1px 0px #f7770e, -1px 1px 0px #f7770e,
+		1px -1px 0px #f7770e;
+	z-index: 2;
+}

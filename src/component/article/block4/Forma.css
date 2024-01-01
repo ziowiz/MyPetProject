@@ -1,0 +1,160 @@
+.form-container {
+	background-color: #ffa500;
+	padding: 18px;
+	border-radius: 17px;
+	width: 80%;
+	margin: 18px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.block_4_flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-header {
+	color: #ffffff;
+	margin-bottom: 1em;
+	font-size: 22px;
+	text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+	padding: 18px;
+	margin: 24px auto 5px;
+	border: 1px solid #dddddd;
+	border-radius: 15px;
+	font-size: clamp(14px, 2vw, 22px);
+	width: 50%;
+	animation: block4 2s ease 0s 1 normal forwards;
+	min-width: 280px;
+}
+@keyframes block4 {
+	0% {
+		opacity: 0;
+		transform: translateX(-80px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+::placeholder {
+	color: #df770f;
+}
+form .button {
+	width: 30%;
+	min-width: 280px;
+	margin: 15px auto;
+	animation: block4btn 3s ease 0s 1 normal forwards;
+}
+@keyframes block4btn {
+	0% {
+		opacity: 0;
+		transform: translateX(+50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+	outline: none;
+	border: 2px solid #ff0000;
+	background-color: lemonchiffon;
+}
+.formsended {
+	height: auto;
+	width: 30%;
+	margin: 0 auto 25px;
+}
+form p {
+	color: red;
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+.dataSubmitted {
+	color: red;
+	font-size: 14px;
+	margin: 20px auto;
+}
+.dataKey {
+	color: orange;
+	font-size: 14px;
+	animation: block4key 1s ease 0s 1 normal forwards;
+}
+@keyframes block4key {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.dataSpan {
+	color: rgb(255, 255, 255);
+	font-size: 12px;
+}
+.labelRadio {
+	display: flex;
+	padding: 10px;
+	margin: 10px auto 10px auto;
+	gap: 40px;
+	animation: block4rad 2s ease 0s 1 normal forwards;
+}
+@keyframes block4rad {
+	0% {
+		opacity: 0;
+		transform: translateX(-330px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.checkStyle {
+	color: #df770f;
+}
+.nonStyle {
+	color: #dddddd;
+}
+.block_4_bg {
+	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
+	position: absolute;
+	left: 6%;
+	top: 60%;
+	width: 25%;
+	height: 25%;
+}
+.block_4_bg2 {
+	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
+	position: absolute;
+	left: 69%;
+	top: 80%;
+	width: 10%;
+	height: 10%;
+}
+.block_4_bg3 {
+	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
+	position: absolute;
+	left: 14%;
+	top: 30%;
+	width: 15%;
+	height: 15%;
+}

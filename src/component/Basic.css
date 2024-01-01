@@ -1,0 +1,49 @@
+.basic {
+	display: grid;
+	grid-template-areas:
+		"header header header header header"
+		"nav article article article article"
+		"nav footer footer footer footer";
+	grid-template-columns: 50px 1fr 1fr 1fr 1fr; /* Устанавливаем ширину навигации 50px и остальное пространство для артикла */
+	grid-template-rows: auto 1fr auto; /* Высота навигации и артикла по содержимому, футер прилипает к низу */
+	min-height: 100vh; /* Минимальная высота для всего грида, чтобы футер мог прилипнуть к низу */
+	text-shadow: 3px 1px 5px #000000;
+}
+@keyframes slideWave {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
+.header {
+	grid-area: header;
+	background-image: url("./img/WaveHaikei.svg");
+	background-repeat: repeat-x;
+	background-size: cover; /* Заполнить весь контейнер, может вызвать обрезку краев SVG */
+	height: 100px;
+	animation: slideWave 50s linear infinite alternate;
+}
+
+.nav {
+	grid-area: nav;
+	background-color: #001122;
+	color: white;
+	/* Убираем width и height, так как ширина уже установлена в grid-template-columns */
+}
+
+.article {
+	grid-area: article;
+	background-color: #001122;
+	color: aliceblue;
+	/* Высота по содержимому, убираем 100vh */
+}
+
+.footer {
+	grid-area: footer;
+	background-color: rgb(22, 21, 21);
+	color: #f7770e;
+	/* Прилипание к низу через grid */
+}
