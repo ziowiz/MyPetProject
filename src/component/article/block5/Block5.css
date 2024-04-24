@@ -22,6 +22,9 @@
 }
 .block5 {
 	animation: slideGradientRightBlock5 1.5s ease 0s 1 normal forwards;
+	background-image: url("Hexagon.svg");
+	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
+	background-repeat: no-repeat; /* чтобы изображение не повторялось */
 }
 @keyframes slideGradientRightBlock5 {
 	0% {
@@ -271,4 +274,53 @@
 	font-size: 48px;
 	animation: blockfix 2s ease 0s 1 normal forwards;
 	gap: 30px;
+}
+@media (max-width: 800x) {
+	.block_3 {
+		scale: 0.73;
+	}
+}
+
+@media (max-width: 730px) {
+	.area {
+		scale: 0.62;
+		margin: -135px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+			"item1 item3"
+			"item2 item3"
+			"item4 item4";
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.area {
+		scale: 0.5;
+		margin: -170px;
+	}
+}
+
+@media (max-width: 500px) {
+	.area {
+		scale: 0.4;
+		margin: -230px;
+	}
+}
+
+@media (max-width: 400px) {
+	.area {
+		scale: 0.32;
+		margin: -250px;
+	}
+}
+
+@media (max-width: 300px) {
+	.area {
+		scale: 0.2;
+		margin: -270px;
+	}
 }

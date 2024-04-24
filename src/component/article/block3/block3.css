@@ -3,10 +3,10 @@
 	justify-self: center;
 	align-items: center;
 	border: 2px solid rgb(199, 144, 27);
-	height: 600px;
-	width: 800px;
+	height: 700px;
+	width: 1200px;
 	margin: 40px auto;
-	background: linear-gradient(to bottom, #87ceeb 0%, #87ceeb 70%, #ffffff 100%);
+	background: linear-gradient(to bottom, #004e6f 0%, #87ceeb 70%, #ffffff 100%);
 	position: relative;
 	overflow: hidden;
 	animation: block3 2s ease 0s 1 normal forwards;
@@ -14,12 +14,20 @@
 	z-index: 2;
 }
 .block_3_bg {
-	background-image: url("./polygon-scatter-haikei.png");
+	background-image: url("CircuitPrimary.svg");
+	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
+	background-repeat: no-repeat; /* чтобы изображение не повторялось */
 	height: 100%;
 	width: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	font-size: clamp(10px, 2vw, 30px);
 }
+
 @keyframes block3 {
 	0% {
 		opacity: 0;
@@ -35,36 +43,35 @@
 	background-color: darkgreen;
 	clip-path: circle(42.7% at 8% 100%);
 	height: 400px;
-	width: 600px;
+	width: 647px;
 	position: absolute;
 	bottom: 1px;
-	box-shadow: #0d290d;
 }
 .earth2 {
 	background-color: rgb(10, 129, 10);
 	clip-path: circle(19.8% at 35% 76%);
 	height: 265px;
-	width: 725px;
+	width: 1095px;
 	position: absolute;
-	bottom: 1px;
+	bottom: -18px;
 }
 .earth3 {
 	background-color: rgb(14, 73, 14);
 	clip-path: circle(33.7% at 59% 100%);
-	height: 400px;
-	width: 800px;
+	height: 363px;
+	width: 1302px;
 	position: absolute;
-	bottom: 1px;
+	bottom: -86px;
 	z-index: 2;
 }
 .earth4 {
 	background-color: rgb(2, 63, 2);
 	clip-path: circle(33.7% at 99% 96%);
-	height: 400px;
-	width: 600px;
+	height: 355px;
+	width: 675px;
 	position: absolute;
-	bottom: 1px;
-	right: 1px;
+	bottom: -4px;
+	right: -5px;
 }
 
 .trees {
@@ -110,19 +117,18 @@
 	width: 150px;
 	position: absolute;
 	bottom: 150px;
-	right: 465px;
+	left: 200px;
 	z-index: 3;
 }
 .trees2_green {
 	clip-path: ellipse(25% 40% at 50% 50%);
 	z-index: 2;
-	background-color: #294104;
 	position: absolute;
 	border: 1px solid green;
-	height: 180px;
-	width: 236px;
+	height: 203px;
+	width: 275px;
 	bottom: 161px;
-	right: 425px;
+	left: 133px;
 	box-shadow: -54px -37px 10px 1px #093b02 inset;
 	animation: myAnimeanim 4s ease 0s infinite alternate forwards;
 }
@@ -170,12 +176,48 @@
 		transform: rotate(1deg);
 	}
 }
+.trees3 {
+	clip-path: polygon(
+		0 26%,
+		33% 37%,
+		46% 2%,
+		42% 41%,
+		62% 38%,
+		84% 13%,
+		71% 40%,
+		45% 56%,
+		57% 100%,
+		42% 100%,
+		32% 57%,
+		22% 40%
+	);
+	background-color: rgb(44, 18, 6);
+	height: 134px;
+	width: 150px;
+	position: absolute;
+	bottom: 180px;
+	left: 600px;
+	z-index: 3;
+}
+.trees3_green3 {
+	clip-path: ellipse(25% 40% at 50% 50%);
+	z-index: 2;
+	background-color: #508400;
+	position: absolute;
+	border: 1px solid #0d290d;
+	height: 185px;
+	width: 312px;
+	bottom: 206px;
+	right: 379px;
+	box-shadow: -44px -37px 10px 1px #093b02 inset;
+	animation: myAnimeanim 6s ease 0s infinite alternate forwards;
+}
 .oblako {
 	position: absolute;
 	height: 215px;
 	width: 259px;
-	bottom: 299px;
-	right: 527px;
+	top: 100px;
+	left: 100px;
 	z-index: 2;
 	animation: moveClouds 27s linear infinite alternate;
 }
@@ -184,8 +226,8 @@
 	position: absolute;
 	height: 168px;
 	width: 263px;
-	bottom: 281px;
-	right: 117px;
+	top: 8px;
+	left: 764px;
 	animation: moveClouds 24s linear infinite alternate;
 }
 .oblako3 {
@@ -193,8 +235,8 @@
 	position: absolute;
 	height: 167px;
 	width: 291px;
-	bottom: 451px;
-	right: 143px;
+	top: 140px;
+	left: 500px;
 	animation: moveClouds 30s linear infinite alternate;
 }
 .oblako4 {
@@ -202,8 +244,8 @@
 	position: absolute;
 	height: 135px;
 	width: 170px;
-	bottom: 400px;
-	right: 288px;
+	top: -27px;
+	left: 516px;
 	animation: moveClouds 20s linear infinite alternate;
 }
 .trees,
@@ -234,9 +276,9 @@
 .block_3 .sun {
 	position: absolute;
 	top: 30px;
-	right: 630px;
-	width: 100px;
-	height: 100px;
+	right: 985px;
+	width: 160px;
+	height: 160px;
 	background-color: #ffdd00;
 	border-radius: 50%;
 	box-shadow: 0 0 50px #ffdd00;
@@ -308,15 +350,15 @@
 	animation: myAnimeanim 4.6s ease 0s infinite alternate forwards;
 }
 .trava5 {
-	bottom: 70px;
+	bottom: 35px;
 	left: 50px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 6.4s ease 0s infinite alternate forwards;
 }
 .trava6 {
-	bottom: 196px;
-	left: 466px;
+	bottom: 40px;
+	left: 427px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 5.4s ease 0s infinite alternate forwards;
@@ -343,7 +385,7 @@
 	animation: myAnimeanim 5.2s ease 0s infinite alternate forwards;
 }
 .trava21 {
-	bottom: 115px;
+	bottom: 6px;
 	left: 130px;
 	height: 50px;
 	width: 50px;
@@ -365,70 +407,70 @@
 }
 .trava24 {
 	bottom: 95px;
-	left: 598px;
+	left: 270px;
 	height: 54px;
 	width: 50px;
 	animation: myAnimeanim 4.6s ease 0s infinite alternate forwards;
 }
 .trava25 {
 	bottom: 9px;
-	left: 111px;
+	left: 303px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 6.4s ease 0s infinite alternate forwards;
 }
 .trava26 {
 	bottom: 2px;
-	left: 366px;
+	left: 1066px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 5.4s ease 0s infinite alternate forwards;
 }
 .trava27 {
-	bottom: 142px;
-	left: 478px;
+	bottom: 183px;
+	left: 778px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 4.8s ease 0s infinite alternate forwards;
 }
 .trava28 {
 	bottom: 133px;
-	left: 246px;
+	left: 846px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 3.4s ease 0s infinite alternate forwards;
 }
 .trava29 {
-	bottom: 193px;
-	left: 7px;
+	bottom: 125px;
+	left: 962px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 5.2s ease 0s infinite alternate forwards;
 }
 .trava10 {
-	bottom: 21px;
-	left: 682px;
+	bottom: 35px;
+	left: 713px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 3.7s ease 0s infinite alternate forwards;
 }
 .trava11 {
 	bottom: 18px;
-	left: 262px;
+	left: 855px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 4.5s ease 0s infinite alternate forwards;
 }
 .trava12 {
 	bottom: 90px;
-	left: 320px;
+	left: 1105px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 7s ease 0s infinite alternate forwards;
 }
 .trava13 {
 	bottom: 51px;
-	left: 415px;
+	left: 970px;
 	height: 50px;
 	width: 50px;
 	animation: myAnimeanim 4.8s ease 0s infinite alternate forwards;
@@ -436,10 +478,12 @@
 .home {
 	clip-path: polygon(32% 0, 91% 0, 86% 100%, 26% 100%);
 	background-color: #432;
-	height: 70px;
-	width: 50px;
+	height: 92px;
+	width: 78px;
 	position: absolute;
-	top: 330px;
+	top: 421px;
+	left: 47px;
+
 	left: 46px;
 	z-index: 2;
 }
@@ -459,11 +503,13 @@
 		0 69%
 	);
 	background-color: #432;
-	height: 85px;
-	width: 70px;
 	position: absolute;
-	top: 296px;
-	left: 42px;
+	height: 131px;
+	width: 144px;
+	position: absolute;
+	top: 358px;
+	left: 22px;
+
 	z-index: 2;
 	animation: spin 2s linear infinite;
 }
@@ -478,11 +524,11 @@
 .nlo {
 	clip-path: polygon(26% 32%, 75% 33%, 100% 50%, 75% 65%, 25% 65%, 0% 50%);
 	background-color: rgb(24, 14, 4);
-	height: 85px;
-	width: 85px;
+	height: 135px;
+	width: 135px;
 	position: absolute;
-	top: 50px;
-	left: 200px;
+	top: 25px;
+	left: 173px;
 	z-index: 3;
 	animation: nlo 4s ease 0s alternate;
 }
@@ -497,53 +543,54 @@
 		transform: translateY(0);
 	}
 }
+.nlo_1 {
+	clip-path: circle(47.9% at 51% 100%);
+	position: absolute;
+	top: 81px;
+	right: -36px;
+	width: 248px;
+	height: 4px;
+	background-color: #db230b;
+	z-index: 3;
+}
 .laser {
 	clip-path: polygon(0 0, 6% 0, 100% 100%, 92% 100%);
 	background-color: red;
-	height: 25px;
-	width: 25px;
+	height: 1px;
+	width: 1px;
 	position: absolute;
 	top: 77px;
 	left: 229px;
-	z-index: 1;
+	z-index: -1;
 	animation: laser 2s ease 4.2s alternate;
 }
 @keyframes laser {
 	0%,
 	20% {
-		height: 25px;
-		width: 25px;
+		height: 1px;
+		width: 1px;
 		opacity: 0;
 	}
-	50%,
+	40%,
 	60% {
-		height: 310px;
-		width: 270px;
+		height: 560px;
+		width: 330px;
 		opacity: 1;
 	}
 	100% {
-		height: 310px;
-		width: 255px;
-		opacity: 0;
+		height: 560px;
+		width: 365px;
+		opacity: 1;
 	}
 }
-.sky2 {
-	background-color: #87ceeb;
-	height: 25px;
-	width: 25px;
-	position: absolute;
-	top: 77px;
-	left: 229px;
-	z-index: 2;
-}
 .expouse {
-	height: 70px;
-	width: 64px;
+	height: 1px;
+	width: 59px;
 	position: absolute;
-	top: 486px;
-	left: 442px;
-	z-index: 1;
-
+	top: 659px;
+	left: 510px;
+	z-index: -1;
+	box-shadow: -1px 0px 150px 70px #ffdd00;
 	animation: expole 2s ease 6.3s 1 normal forwards;
 }
 @keyframes expole {
@@ -892,30 +939,30 @@
 }
 .sun2 {
 	position: absolute;
-	top: 36px;
-	right: 60px;
-	width: 10px;
-	height: 10px;
+	top: 54px;
+	right: 85px;
+	width: 21px;
+	height: 21px;
 	background-color: #db230b;
 	border-radius: 50%;
 	z-index: 4;
 }
 .sun3 {
 	position: absolute;
-	top: 36px;
-	right: 37px;
-	width: 10px;
-	height: 10px;
+	top: 54px;
+	right: 54px;
+	width: 21px;
+	height: 21px;
 	background-color: #db230b;
 	border-radius: 50%;
 	z-index: 4;
 }
 .sun4 {
 	position: absolute;
-	top: 36px;
-	right: 15px;
-	width: 10px;
-	height: 10px;
+	top: 54px;
+	right: 24px;
+	width: 21px;
+	height: 21px;
 	background-color: #db230b;
 	border-radius: 50%;
 	z-index: 4;
@@ -932,54 +979,211 @@
 .expouse_10 {
 	background: radial-gradient(#ffea00 15%, #ff0000 94%);
 	position: absolute;
+	box-shadow: #0d290d;
 }
 .expouse_1 {
-	width: 80px;
-	height: 80px;
-	top: 0px;
-	right: 0px;
+	width: 137px;
+	height: 124px;
+	top: -31px;
+	right: -25px;
 	clip-path: ellipse(14% 50% at 50% 50%);
 }
 .expouse_2 {
-	width: 80px;
+	width: 99px;
 	height: 80px;
 	top: 29px;
 	right: 0px;
 	clip-path: ellipse(50% 21% at 50% 50%);
 }
 .expouse_3 {
-	width: 80px;
-	height: 105px;
-	top: -58px;
-	right: 0px;
+	width: 94px;
+	height: 104px;
+	top: -89px;
+	right: -5px;
 	clip-path: ellipse(50% 21% at 50% 50%);
 }
 .expouse_4 {
-	width: 36px;
-	height: 65px;
-	top: 21px;
-	right: 22px;
+	width: 11px;
+	height: 241px;
+	top: -82px;
+	right: 38px;
+	opacity: 0.6;
 	clip-path: ellipse(50% 21% at 50% 50%);
 }
 .expouse_5 {
-	width: 139px;
-	height: 99px;
-	top: -51px;
-	right: -28px;
+	width: 179px;
+	height: 117px;
+	top: -94px;
+	right: -44px;
 	clip-path: ellipse(50% 21% at 50% 50%);
 	opacity: 0.6;
 }
 .expouse_6 {
-	width: 139px;
+	width: 223px;
 	height: 99px;
-	top: -50px;
-	right: -28px;
+	top: -83px;
+	right: -63px;
 	clip-path: ellipse(50% 7% at 50% 50%);
+	opacity: 0.8;
 }
 .expouse_7 {
-	width: 51px;
-	height: 22px;
-	top: 15px;
-	right: 15px;
+	width: 92px;
+	height: 43px;
+	top: -20px;
+	right: -1px;
 	clip-path: ellipse(50% 7% at 50% 50%);
+	opacity: 0.6;
+}
+.mount {
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	top: -46px;
+	left: -44px;
+	z-index: -1;
+}
+.mount_1 {
+	clip-path: polygon(63% 0, 0% 100%, 100% 100%);
+	height: 308px;
+	width: 246px;
+	top: 351px;
+	left: 900px;
+	position: absolute;
+	background-color: #432;
+}
+.mount_2 {
+	clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+	height: 300px;
+	width: 300px;
+	top: 291px;
+	left: 785px;
+	position: absolute;
+	background-color: rgb(39, 29, 19);
+}
+.mount_3 {
+	clip-path: polygon(21% 22%, 0% 100%, 100% 100%);
+	height: 200px;
+	width: 200px;
+	top: 362px;
+	left: 768px;
+	position: absolute;
+	background-color: rgb(39, 29, 19);
+}
+.mount_4 {
+	clip-path: polygon(
+		53% 0,
+		70% 18%,
+		93% 48%,
+		66% 32%,
+		46% 46%,
+		30% 35%,
+		3% 41%
+	);
+	background-color: white;
+	height: 313px;
+	width: 123px;
+	top: 345px;
+	left: 989px;
+	position: absolute;
+}
+.mount_5 {
+	clip-path: polygon(
+		50% 0%,
+		100% 100%,
+		73% 67%,
+		57% 90%,
+		43% 59%,
+		26% 83%,
+		0 100%
+	);
+	background-color: white;
+	height: 153px;
+	width: 154px;
+	top: 291px;
+	left: 858px;
+	position: absolute;
+}
+.mount_6 {
+	clip-path: polygon(40% 0, 15% 81%, 44% 61%);
+	background-color: white;
+	height: 131px;
+	width: 111px;
+	top: 409px;
+	left: 763px;
+	position: absolute;
+}
+@media (max-width: 1300px) {
+	.block_3 {
+		scale: 0.87;
+	}
+}
+
+@media (max-width: 1200px) {
+	.block_3 {
+		scale: 0.8;
+	}
+}
+
+@media (max-width: 1100px) {
+	.block_3 {
+		scale: 0.75;
+		margin: -30px auto;
+	}
+}
+
+@media (max-width: 1000px) {
+	.block_3 {
+		scale: 0.66;
+		margin: -45px auto;
+	}
+}
+
+@media (max-width: 900px) {
+	.block_3 {
+		scale: 0.58;
+		margin: -70px auto;
+	}
+}
+
+@media (max-width: 800px) {
+	.block_3 {
+		scale: 0.52;
+		margin: -125px auto;
+	}
+}
+
+@media (max-width: 700px) {
+	.block_3 {
+		scale: 0.4;
+		margin: -180px auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.block_3 {
+		scale: 0.34;
+		margin: -216px auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.block_3 {
+		scale: 0.25;
+	}
+}
+
+@media (max-width: 400px) {
+	.block_3 {
+		scale: 0.24;
+	}
+}
+@media (max-width: 350px) {
+	.block_3 {
+		scale: 0.18;
+	}
+}
+@media (max-width: 300px) {
+	.block_3 {
+		scale: 0.15;
+	}
 }

@@ -12,6 +12,9 @@
 .block_4_flex {
 	display: flex;
 	flex-direction: column;
+	background-image: url("Hexagon.svg");
+	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
+	background-repeat: no-repeat; /* чтобы изображение не повторялось */
 }
 
 .form-header {
@@ -133,28 +136,4 @@ form p {
 }
 .nonStyle {
 	color: #dddddd;
-}
-.block_4_bg {
-	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
-	position: absolute;
-	left: 6%;
-	top: 60%;
-	width: 25%;
-	height: 25%;
-}
-.block_4_bg2 {
-	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
-	position: absolute;
-	left: 69%;
-	top: 80%;
-	width: 10%;
-	height: 10%;
-}
-.block_4_bg3 {
-	background: radial-gradient(#001122 41%, #f7770e 45%, #001122 49%);
-	position: absolute;
-	left: 14%;
-	top: 30%;
-	width: 15%;
-	height: 15%;
 }

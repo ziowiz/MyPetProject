@@ -50,7 +50,9 @@
 .block_1_flex {
 	display: flex;
 	height: 100%;
-	background: linear-gradient(0deg, #f7770e 0%, #001122 24%);
+	background-image: url("WaveLine.svg");
+	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
+	background-repeat: no-repeat; /* чтобы изображение не повторялось */
 	animation: slideGradientUpBlock1 1s ease 0s 1 normal forwards;
 }
 

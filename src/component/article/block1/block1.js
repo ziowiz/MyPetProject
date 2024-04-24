@@ -13,10 +13,16 @@ age: 34,
 skills: ["HTML", "CSS", "Figma"
 	 "Jquery",  "Api-telegram",
 	 "Node.js", "JavaScript",
-	 "Git", "Photoshop",
+	 "Git",  "GitHub", "Photoshop",
 	 "Wordpress", "React",
-	 "Bootstrap", "SASS"
-	 "SonyVegas", moding game,],
+	 "SASS", "SCSS", "NoSQL(mongoBD),
+	 "Хостинг", "TypeScrypt",
+	 "moding game", "SonyVegas", ],
+
+MyFull-Projects:
+http://air-web.kh.ua
+https://painmylife.com
+https://givemehope.site
 
 exp: "1 year dev, 1 year admin website",
 
@@ -35,7 +41,7 @@ and efficient construction of web applications.
 }`;
 	const highlightContent = (text) => {
 		return text.replace(
-			/(skills:|exp:|location:|bio:|age:|slills:|lastName:|name:)/g,
+			/(skills:|exp:|location:|bio:|age:|slills:|lastName:|name:|MyFull-Projects:)/g,
 			'<span class="highlight">$1</span>'
 		);
 	};

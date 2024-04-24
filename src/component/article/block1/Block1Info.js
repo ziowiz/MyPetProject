@@ -44,7 +44,7 @@ function Block1Info(params) {
 					<p>LinkedIn</p>
 				</a>
 				<a
-					href="https://t.me/@ziowizard"
+					href="https://t.me/@dimka_zabarov"
 					target="_blank"
 					rel="noopener noreferrer"
 				>

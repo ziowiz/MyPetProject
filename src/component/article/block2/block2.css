@@ -60,13 +60,7 @@
 	margin: 0 auto;
 }
 .block_2_bg {
-	background: linear-gradient(
-		179deg,
-		#001122 83%,
-		#f7770e 85%,
-		#f7770e 87%,
-		#001122 89%
-	);
-	width: 100%;
-	height: 100%;
+	background-image: url("ContourLine.svg");
+	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
+	background-repeat: no-repeat; /* чтобы изображение не повторялось */
 }

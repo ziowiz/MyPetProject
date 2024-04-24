@@ -44,6 +44,8 @@ function Block3(params) {
 						<div className="oblako_5_4"></div>
 						<div className="oblako_5_5"></div>
 					</div>
+					<div className="trees3"></div>
+					<div className="trees3_green3"></div>
 					<div className="trees"></div>
 					<div className="trees2"></div>
 					<div className="trees2_green"></div>
@@ -78,6 +80,7 @@ function Block3(params) {
 					<div className="earth"></div>
 					<div className="sun"></div>
 					<div className="nlo">
+						<div className="nlo_1"></div>
 						<div className="sun2"></div>
 						<div className="sun3"></div>
 						<div className="sun4"></div>
@@ -95,6 +98,24 @@ function Block3(params) {
 						<div className="expouse_8"></div>
 						<div className="expouse_9"></div>
 						<div className="expouse_10"></div>
+					</div>
+					<div className="mount">
+						<div className="mount_2"></div>
+						<div className="mount_1"></div>
+						<div className="mount_3"></div>
+						<div className="mount_4"></div>
+						<div className="mount_5"></div>
+						<div className="mount_6"></div>
+						<div className="mount_7"></div>
+						<div className="mount_8"></div>
+						<div className="mount_9"></div>
+						<div className="mount_10"></div>
+						<div className="mount_11"></div>
+						<div className="mount_12"></div>
+						<div className="mount_13"></div>
+						<div className="mount_14"></div>
+						<div className="mount_15"></div>
+						<div className="mount_16"></div>
 					</div>
 				</div>
 			</div>
