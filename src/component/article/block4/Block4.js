@@ -34,27 +34,60 @@ function Block4() {
 		setCheckboxStyle2(checkboxStyle2 ? false : true);
 		console.log(checkboxStyle2);
 	};
-
 	const {
 		register,
 		handleSubmit,
 		reset,
 		formState: { errors },
 	} = useForm();
+
 	const onSubmit = (data) => {
-		console.log(data);
-		setSubmittedData(data);
+		setSubmittedData(data); // Установка данных формы в состояние
+		addDataBase(data); // Вызов функции для отправки данных в базу данных
 	};
+
 	const onReset = () => {
-		reset();
-		setSubmittedData({});
+		reset(); // Сброс формы
+		setSubmittedData({}); // Очистка данных в состоянии
 	};
+
+	const addDataBase = (objData) => {
+		console.log("addDataBase start in function");
+
+		const url = "http://localhost:80/src/registration.php";
+
+		const options = {
+			method: "POST", // HTTP метод
+			headers: {
+				"Content-Type": "application/json", // Тип контента
+			},
+			body: JSON.stringify({
+				login: objData.login,
+				password: objData.password,
+				email: objData.email,
+				phone: objData.phone,
+				radio: objData.radio,
+				checkbox1: objData["checkbox-1"],
+				checkbox2: objData["checkbox-2"],
+			}),
+		};
+
+		fetch(url, options)
+			.then((response) => response.text()) // Сначала получаем ответ как текст
+			.then((data) => {
+				console.log("Успех:", data);
+			})
+			.catch((error) => {
+				console.error("Ошибка при запросе:", error);
+			});
+	};
+
 	return (
 		<div>
 			<div className="block_4_bg"></div>
 			<div className="block_4_bg2"></div>
 			<div className="block_4_bg3"></div>
-			<h2>Form - "useForm"</h2>
+			<h2>"useForm" + PhP(MySQL-pdo) </h2>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
 				className="block_4_flex"
@@ -213,7 +246,9 @@ function Block4() {
 			</form>
 			{Object.keys(submittedData).length > 0 && (
 				<div className="formsended">
-					<h3 className="dataSubmitted">Data Submitted:</h3>
+					<h3 className="dataSubmitted">
+						Data Submitted: add in MySQL(password_hash)
+					</h3>
 
 					{Object.keys(submittedData).length === 0
 						? null

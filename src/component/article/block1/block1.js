@@ -15,14 +15,16 @@ skills: ["HTML", "CSS", "Figma"
 	 "Node.js", "JavaScript",
 	 "Git",  "GitHub", "Photoshop",
 	 "Wordpress", "React",
-	 "SASS", "SCSS", "NoSQL(mongoBD),
-	 "Хостинг", "TypeScrypt",
-	 "moding game", "SonyVegas", ],
+	 "SASS", "SCSS", "NoSQL(mongoBD)",
+	 "PhP", "MySQL", "Hosting",
+	 "TypeScrypt", "moding game",
+	 "SonyVegas", "English B2"],
 
-MyFull-Projects:
-http://air-web.kh.ua
-https://painmylife.com
-https://givemehope.site
+My Full-stack Projects:
+http://air-web.kh.ua (JS + api-telegram),
+https://painmylife.com (JS),
+https://givemehope.site (react+noSQL),
+https://tata-beauty.com (JS+PhP+MySQL),
 
 exp: "1 year dev, 1 year admin website",
 
