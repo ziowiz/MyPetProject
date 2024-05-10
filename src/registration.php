@@ -13,11 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $dataReact = json_decode(file_get_contents('php://input'), true);
-if ($dataReact['login'] === "postData send in php file") {
-  echo json_encode(["status" => "success", "message" => "Data received"]);
-} else {
-  echo json_encode(["status" => "error", "message" => "Data not received"]);
-}
 
 $login = filter_var($dataReact['login'], FILTER_SANITIZE_STRING);
 $pass = $dataReact['password']; // Хеширование пароля будет ниже
@@ -35,7 +30,7 @@ if ($checkQuery->rowCount() > 0) {
   exit;
 }
 
-$password = password_hash($password, PASSWORD_DEFAULT); // Хэширование пароля
+$password = password_hash($pass, PASSWORD_DEFAULT); // Хэширование пароля
 
 // Подготовка запроса на вставку
 $query = $pdo->prepare("INSERT INTO registration (login, password, email, phone, radio, checkbox1, checkbox2) VALUES (?, ?, ?, ?, ?, ?, ?)");
@@ -43,10 +38,7 @@ $query = $pdo->prepare("INSERT INTO registration (login, password, email, phone,
 try {
   $query->execute([$login, $password, $email, $phone, $radio, $checkbox1, $checkbox2]); // Выполнение подготовленного запроса
 
-  $_SESSION['auth'] = true; // Пользователь авторизован
-  $_SESSION['login'] = $login; // Сохраняем логин в сессии
-
-  echo "success";
+  echo "MySQL: New record created successfully";
 } catch (PDOException $e) {
   echo "ERROR: Could not execute query: " . $e->getMessage();
 }
