@@ -98,12 +98,19 @@ form .button {
 @keyframes block4btn {
 	0% {
 		opacity: 0;
-		transform: translateX(+50px);
+		transform: translateY(+70px);
 	}
-
+	40% {
+		opacity: 0.6;
+		transform: translateY(-30px);
+	}
+	90% {
+		opacity: 0.9;
+		transform: translateY(+10px);
+	}
 	100% {
 		opacity: 1;
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
@@ -140,7 +147,14 @@ form p {
 		opacity: 0;
 		transform: translateY(-50px);
 	}
-
+	35% {
+		opacity: 0.4;
+		transform: translateY(+50px);
+	}
+	75% {
+		opacity: 0.8;
+		transform: translateY(-20px);
+	}
 	100% {
 		opacity: 1;
 		transform: translateY(0);
@@ -160,12 +174,19 @@ form p {
 @keyframes block4rad {
 	0% {
 		opacity: 0;
-		transform: translateX(-330px);
+		transform: translateY(-50px);
 	}
-
+	35% {
+		opacity: 0.4;
+		transform: translateY(+20px);
+	}
+	75% {
+		opacity: 0.8;
+		transform: translateY(-20px);
+	}
 	100% {
 		opacity: 1;
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 .checkStyle {

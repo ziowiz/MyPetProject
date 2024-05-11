@@ -3,8 +3,8 @@
 	font-size: clamp(19px, 2vw, 30px);
 	min-height: 75px;
 	width: 80%;
-	margin: 0 auto;
-	text-shadow: 1px 1px 0px #f7770e, 0px -1px 0px #f7770e, -1px 1px 0px #f7770e,
+	margin: 10px auto;
+	text-shadow: 1px 1px 0px #f7770e, 0px -1px 3px #ec9248, -1px 1px 5px #ebd7c7,
 		1px -1px 0px #f7770e;
 	word-wrap: break-word;
 }
