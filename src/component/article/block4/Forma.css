@@ -17,6 +17,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+	margin-bottom: 40px;
 }
 .Block_4FlexBox {
 	display: flex;
@@ -29,8 +30,12 @@
 }
 .Hello {
 	color: #df770f;
-	text-shadow: 2px 2px 2px black;
+	text-shadow: var(--textShadowBlack);
+	font-size: clamp(19px, 2vw, 30px);
 	border-bottom: 2px solid #df770f;
+	box-shadow: 1 0 1 #f59434, 1 0 2 #df770f80, 1 0 3 #ffd5ab49;
+	margin: 15px auto 15px;
+	animation: pulsate 5s infinite alternate;
 }
 
 .Block_4FlexBoxLogin {
@@ -39,20 +44,21 @@
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
+	margin-bottom: 40px;
 }
 .block_4_login {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 }
 .block_4_Change {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+
+	margin-bottom: 40px;
 }
 .form-header {
 	color: #ffffff;
@@ -67,51 +73,25 @@ input[type="email"],
 input[type="tel"] {
 	padding: 18px;
 	margin: 24px auto 5px;
-	border: 1px solid #dddddd;
+	border: 1px solid transparent;
 	border-radius: 15px;
 	font-size: clamp(14px, 2vw, 22px);
 	width: 50%;
-	animation: block4 2s ease 0s 1 normal forwards;
-	min-width: 280px;
-}
-@keyframes block4 {
-	0% {
-		opacity: 0;
-		transform: translateX(-80px);
-	}
+	box-shadow: var(--boxShadow);
 
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+	min-width: 280px;
 }
 
 ::placeholder {
 	color: #df770f;
+	text-shadow: 0 0 1 black;
 }
 form .button {
 	width: 30%;
 	min-width: 280px;
 	margin: 15px auto;
-	animation: block4btn 3s ease 0s 1 normal forwards;
-}
-@keyframes block4btn {
-	0% {
-		opacity: 0;
-		transform: translateY(+70px);
-	}
-	40% {
-		opacity: 0.6;
-		transform: translateY(-30px);
-	}
-	90% {
-		opacity: 0.9;
-		transform: translateY(+10px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	transition: 0.5s;
+	text-shadow: 2px 2px 2px black;
 }
 
 input[type="text"]:focus,
@@ -119,18 +99,19 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus {
 	outline: none;
-	border: 2px solid #ff0000;
-	background-color: lemonchiffon;
+	border: 1px solid #000000;
+	background-color: rgb(235, 223, 202);
 }
 .formsended {
 	height: auto;
-
 	margin: 0 auto 25px;
 }
 form p {
 	color: red;
 	font-size: 14px;
 	margin-bottom: 25px;
+	text-shadow: 2px 2px 2px black;
+	border-bottom: 2px solid #df770f;
 }
 .dataSubmitted {
 	color: red;
@@ -140,25 +121,6 @@ form p {
 .dataKey {
 	color: orange;
 	font-size: 14px;
-	animation: block4key 1s ease 0s 1 normal forwards;
-}
-@keyframes block4key {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
-	35% {
-		opacity: 0.4;
-		transform: translateY(+50px);
-	}
-	75% {
-		opacity: 0.8;
-		transform: translateY(-20px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }
 .dataSpan {
 	color: rgb(255, 255, 255);
@@ -169,26 +131,8 @@ form p {
 	padding: 10px;
 	margin: 10px auto 10px auto;
 	gap: 40px;
-	animation: block4rad 2s ease 0s 1 normal forwards;
 }
-@keyframes block4rad {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
-	35% {
-		opacity: 0.4;
-		transform: translateY(+20px);
-	}
-	75% {
-		opacity: 0.8;
-		transform: translateY(-20px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
+
 .checkStyle {
 	color: #df770f;
 }
@@ -201,5 +145,97 @@ form p {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
+	}
+}
+.useForm {
+	animation: inputAnimation 3s ease 0s 1 normal forwards;
+	text-shadow: var(--textShadow);
+}
+.inputAnimation_0 {
+	animation: inputAnimation 1s ease 0s 1 normal forwards;
+
+	text-shadow: var(--textShadow);
+}
+.inputAnimation_1 {
+	animation: inputAnimation 1.2s ease 0s 1 normal forwards;
+}
+.inputAnimation_2 {
+	animation: inputAnimation 1.4s ease 0s 1 normal forwards;
+}
+.inputAnimation_3 {
+	animation: inputAnimation 1.6s ease 0s 1 normal forwards;
+}
+.inputAnimation_4 {
+	animation: inputAnimation 1.8s ease 0s 1 normal forwards;
+}
+.inputAnimation_5 {
+	animation: inputAnimation 2s ease 0s 1 normal forwards;
+}
+.inputAnimation_60 {
+	animation: inputAnimation 2.2s ease 0s 1 normal forwards;
+}
+.inputAnimation_7 {
+	animation: inputAnimation 2.4s ease 0s 1 normal forwards;
+}
+.inputAnimation_8 {
+	animation: inputAnimation 2.6s ease 0s 1 normal forwards;
+}
+.inputAnimation_9 {
+	animation: inputAnimation 2.8s ease 0s 1 normal forwards;
+}
+.inputAnimation_10 {
+	animation: inputAnimation 3s ease 0s 1 normal forwards;
+}
+.inputAnimation_11 {
+	animation: inputAnimation 1.2s ease 0s 1 normal forwards;
+
+	text-shadow: var(--textShadow);
+}
+.inputAnimation_12 {
+	animation: inputAnimation 1.4s ease 0s 1 normal forwards;
+}
+.inputAnimation_13 {
+	animation: inputAnimation 1.6s ease 0s 1 normal forwards;
+}
+.inputAnimation_14 {
+	animation: inputAnimation 1.8s ease 0s 1 normal forwards;
+}
+.inputAnimation_15 {
+	animation: inputAnimation 2s ease 0s 1 normal forwards;
+}
+.inputAnimation_16 {
+	animation: inputAnimation 1s ease 0s 1 normal forwards;
+
+	text-shadow: var(--textShadow);
+}
+.inputAnimation_17 {
+	animation: inputAnimation 1.2s ease 0s 1 normal forwards;
+}
+.inputAnimation_18 {
+	animation: inputAnimation 1.4s ease 0s 1 normal forwards;
+}
+.inputAnimation_19 {
+	animation: inputAnimation 1.6s ease 0s 1 normal forwards;
+}
+.inputAnimation_20 {
+	animation: inputAnimation 1.8s ease 0s 1 normal forwards;
+}
+.inputAnimation_21 {
+	animation: inputAnimation 2.2s ease 0s 1 normal forwards;
+}
+.inputAnimation_22 {
+	animation: inputAnimation 2.4s ease 0s 1 normal forwards;
+}
+@keyframes inputAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(-80px);
+	}
+	25% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0);
 	}
 }

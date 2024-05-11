@@ -5,20 +5,22 @@
 	background-color: #f7770e;
 	font-size: clamp(14px, 2vw, 24px);
 	padding: 10px 15px;
-	border: none;
+	border: 1px solid var(--borderPink);
 	border-radius: 5px;
-	border: 1px solid transparent;
 	color: white;
+	box-shadow: var(--boxShadow);
 }
 .button:hover {
 	background-color: rgb(241, 241, 241);
-	border: 1px solid rgb(238, 4, 4);
+	border: 1px solid rgb(0, 0, 0);
+	transition: 0.5s;
 	color: #f7770e;
 }
 .button:active {
-	background-color: rgb(253, 0, 0);
-	border: 1px solid rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	border: 2px solid rgb(255, 255, 255);
 	color: black;
+	transition: 0.5s;
 }
 .todoListContainer {
 	padding: 10px;
@@ -61,6 +63,8 @@
 }
 .block_2_bg {
 	background-image: url("ContourLine.svg");
-	background-size: cover; /* или используй 100% 100%, чтобы изображение растягивалось на весь элемент */
-	background-repeat: no-repeat; /* чтобы изображение не повторялось */
+	background-size: cover; /* Покрывает всю доступную область без искажения */
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100vh; /* Минимальная высота элемента, например, 100% от высоты видимой части экрана */
 }

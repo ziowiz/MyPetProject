@@ -22,7 +22,7 @@ function Block4() {
 
 	// Handle login
 	const loginStart = (loginName, passwordName) => {
-		const url = "http://localhost:80/src/login.php";
+		const url = "src/login.php";
 		const options = {
 			method: "POST",
 			headers: {
@@ -63,7 +63,7 @@ function Block4() {
 			alert("New passwords do not match!");
 			return;
 		}
-		const url = "http://localhost:80/src/changePass.php";
+		const url = "src/changePass.php";
 		const options = {
 			method: "POST",
 			headers: {
@@ -155,7 +155,7 @@ function Block4() {
 	const addDataBase = (objData) => {
 		console.log("addDataBase start in function");
 
-		const url = "http://localhost:80/src/registration.php";
+		const url = "src/registration.php";
 
 		const options = {
 			method: "POST", // HTTP метод
@@ -191,7 +191,7 @@ function Block4() {
 			<div className="block_4_bg"></div>
 			<div className="block_4_bg2"></div>
 			<div className="block_4_bg3"></div>
-			<h2>"useForm" + PhP(MySQL-pdo) </h2>
+			<h2 className="useForm">"useForm" + PhP(MySQL-pdo) </h2>
 			{auth ? (
 				<h2 className="Hello">Hello, {auth}</h2>
 			) : (
@@ -199,7 +199,7 @@ function Block4() {
 			)}
 			<div className="Block_4FlexBox">
 				<div className="Block_4FlexBoxRegistration">
-					<h3>Registration</h3>
+					<h3 className="inputAnimation_0">Registration</h3>
 					<form
 						onSubmit={handleSubmit(onSubmit)}
 						className="block_4_flex"
@@ -220,6 +220,7 @@ function Block4() {
 									message: "Login can only contain English letters and numbers",
 								},
 							})}
+							className="inputAnimation_1"
 							type="text"
 							placeholder="Enter your name"
 							name="login"
@@ -245,6 +246,7 @@ function Block4() {
 										"Password can only contain English letters and numbers",
 								},
 							})}
+							className="inputAnimation_2"
 							type="password"
 							placeholder="Enter your password"
 							name="password"
@@ -259,6 +261,7 @@ function Block4() {
 									message: "Invalid email format",
 								},
 							})}
+							className="inputAnimation_3"
 							type="email"
 							placeholder="Enter your email"
 							name="email"
@@ -283,6 +286,7 @@ function Block4() {
 									message: "Phone number must not exceed 15 digits",
 								},
 							})}
+							className="inputAnimation_4"
 							type="tel"
 							placeholder="Enter your phone number"
 							name="phone"
@@ -293,6 +297,7 @@ function Block4() {
 						<div className="labelRadio">
 							<label>
 								<input
+									className="inputAnimation_5"
 									type="radio"
 									value="Boy"
 									onClick={radioHandler}
@@ -308,6 +313,7 @@ function Block4() {
 							</label>
 							<label>
 								<input
+									className="inputAnimation_6"
 									type="radio"
 									value="Girl"
 									onClick={radioHandler}
@@ -326,6 +332,7 @@ function Block4() {
 						<div className="labelRadio">
 							<label>
 								<input
+									className="inputAnimation_7"
 									type="checkbox"
 									value={true}
 									{...register("checkbox-1")}
@@ -337,6 +344,7 @@ function Block4() {
 							</label>
 							<label>
 								<input
+									className="inputAnimation_8"
 									type="checkbox"
 									value={true}
 									{...register("checkbox-2")}
@@ -348,7 +356,7 @@ function Block4() {
 							</label>
 						</div>
 						<button
-							className="button"
+							className="button inputAnimation_9"
 							type="button"
 							onClick={onReset}
 						>
@@ -356,7 +364,7 @@ function Block4() {
 						</button>
 						<button
 							type="submit"
-							className="button"
+							className="button inputAnimation_10"
 						>
 							Submit
 						</button>
@@ -382,7 +390,7 @@ function Block4() {
 				</div>
 				<div className="Block_4FlexBoxLogin">
 					{" "}
-					<h3>Login</h3>
+					<h3 className="inputAnimation_11">Login</h3>
 					<form
 						className="block_4_Change"
 						onSubmit={(e) => {
@@ -391,28 +399,31 @@ function Block4() {
 						}}
 					>
 						<input
+							className="inputAnimation_12"
 							name="loginName"
 							type="text"
 							value={loginName}
-							placeholder="login"
+							placeholder="Login"
 							onChange={(e) => setLoginName(e.target.value)}
 						/>
 						<input
+							className="inputAnimation_13"
 							name="passwordName"
 							type="password"
-							placeholder="password"
+							placeholder="Password"
 							value={passwordName}
 							onChange={(e) => setPasswordName(e.target.value)}
 						/>
+						<p>{loginResponse}</p>
 						<button
-							className="button"
+							className="button inputAnimation_14"
 							type="submit"
 						>
 							Login
 						</button>
-						<p>{loginResponse}</p>
+
 						<button
-							className="button"
+							className="button inputAnimation_15"
 							onClick={() => setAuth("")} // Используйте стрелочную функцию для вызова setAuth при клике
 						>
 							Exit
@@ -420,7 +431,7 @@ function Block4() {
 					</form>
 				</div>
 				<div className="block_4_Change">
-					<h3>Change password</h3>
+					<h3 className="inputAnimation_16">Change password</h3>
 					<form
 						className="block_4_Change"
 						onSubmit={(e) => {
@@ -435,6 +446,7 @@ function Block4() {
 						}}
 					>
 						<input
+							className="inputAnimation_17"
 							name="loginChangeName"
 							type="text"
 							placeholder="Login"
@@ -442,6 +454,7 @@ function Block4() {
 							onChange={(e) => setLoginChangeName(e.target.value)}
 						/>
 						<input
+							className="inputAnimation_18"
 							name="emailChangeName"
 							type="email"
 							placeholder="Email"
@@ -449,6 +462,7 @@ function Block4() {
 							onChange={(e) => setEmailChangeName(e.target.value)}
 						/>
 						<input
+							className="inputAnimation_19"
 							name="passwordOld"
 							type="text"
 							placeholder="Old password"
@@ -456,6 +470,7 @@ function Block4() {
 							onChange={(e) => setOldPassword(e.target.value)}
 						/>
 						<input
+							className="inputAnimation_20"
 							name="passwordChangeName_1"
 							type="password"
 							placeholder="New password"
@@ -463,6 +478,7 @@ function Block4() {
 							onChange={(e) => setNewPassword(e.target.value)}
 						/>
 						<input
+							className="inputAnimation_21"
 							name="passwordChangeName_2"
 							type="password"
 							placeholder="Repeat new password"
@@ -471,7 +487,7 @@ function Block4() {
 						/>
 						<p>{ChangeResponse}</p>
 						<button
-							className="button"
+							className="button inputAnimation_22"
 							type="submit"
 						>
 							Change password

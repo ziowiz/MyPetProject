@@ -1,3 +1,15 @@
+:root {
+	--BGblack: #001122;
+	--borderPink: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f5913f,
+		0 0 0.8rem #f7770e, 0 0 2.8rem #be5601, inset 0 0 1.3rem #612d02;
+	--textShadow: 0 0 1px black, 0 0 18px #f3b666, 0 0 14px #f0bc5b,
+		0 0 22px #f7770e, 0 0 32px #db6708, 0 0 42px #b45303;
+	--boxShadow: 0 0 3px #fff, 0 0 5px #fff2e0, 0 0 8px #f09d59, 0 0 14px #ee8a39,
+		0 0 16px #f7770e, inset 0 0 3px #ff7300;
+	--textShadowBlack: 0 0 1px black, 0 0 9px #6b2b00, 0 0 14px #c06d00,
+		0 0 27px #f5a613, 0 0 42px #fa903a, 0 0 32px #fdbe89, 0 0 32px #eeccb0;
+}
+
 .basic {
 	display: grid;
 	grid-template-areas:
