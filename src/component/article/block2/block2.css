@@ -56,10 +56,9 @@
 	}
 }
 .block_2 {
-	width: 1000px;
+	width: 45%;
 	max-width: 98%;
 	padding: 10px;
-	margin: 0 auto;
 }
 .block_2_bg {
 	background-image: url("ContourLine.svg");
@@ -67,4 +66,96 @@
 	background-repeat: no-repeat;
 	width: 100%;
 	min-height: 100vh; /* Минимальная высота элемента, например, 100% от высоты видимой части экрана */
+	display: flex;
+	justify-content: space-evenly;
+	margin: 15px 0;
+}
+.block_2_chat {
+	width: 45%;
+	padding: 16px;
+}
+.chat {
+	background: #1d1c1c98;
+	color: #fff;
+	max-height: 700px;
+	border: 1px solid rgb(255, 145, 0);
+	border-radius: 8px;
+	box-shadow: var(--borderPink);
+	padding: 6px 6px;
+	display: flex;
+	flex-direction: column;
+	font-size: clamp(12px, 2vw, 20px);
+}
+.chat h4 {
+	text-align: center;
+	margin: 4px auto;
+	text-shadow: var(--textShadow);
+}
+.chat-messages {
+	width: 95%;
+	height: 80%;
+	overflow: auto;
+	padding: 14px;
+	background: #161616;
+	border: 1px solid rgb(207, 93, 0);
+	border-radius: 8px;
+	margin: 8px auto;
+	font-size: clamp(15px, 2vw, 20px);
+	display: flex;
+	flex-direction: column-reverse;
+}
+.chat-messages p {
+	text-align: left;
+	color: #f7770e;
+	font-size: clamp(11px, 2vw, 18px);
+}
+.chat-messages span {
+	text-align: left;
+	color: #ffffff;
+	font-size: clamp(11px, 2vw, 18px);
+}
+.chat-input {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.chat-form__submit {
+	margin: 8px auto;
+	height: 30px;
+	cursor: pointer;
+	background-color: #f7770e;
+	font-size: clamp(14px, 2vw, 20px);
+	padding: 6px 10px;
+	border: 1px solid var(--borderPink);
+	border-radius: 5px;
+	color: white;
+	box-shadow: var(--boxShadow);
+}
+.chat-form__submit:hover {
+	background-color: rgb(241, 241, 241);
+	border: 1px solid rgb(0, 0, 0);
+	transition: 0.5s;
+	color: #f7770e;
+}
+.chat-form__submit:active {
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(255, 255, 255);
+	color: black;
+	transition: 0.5s;
+}
+@media (max-width: 1100px) {
+	.block_2_bg {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.block_2_chat {
+		width: 98%;
+	}
+	.block_2 {
+		width: 98%;
+		max-width: 98%;
+		padding: 10px;
+	}
 }

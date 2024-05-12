@@ -59,3 +59,25 @@
 	color: #f7770e;
 	/* Прилипание к низу через grid */
 }
+/* Стилизация скроллбара для всех элементов */
+::-webkit-scrollbar {
+	width: 8px; /* ширина скроллбара */
+}
+
+/* Дорожка скроллбара */
+::-webkit-scrollbar-track {
+	background: #f17603; /* цвет фона */
+	border-radius: 10px; /* скругление углов */
+}
+
+/* Ручка скроллбара */
+::-webkit-scrollbar-thumb {
+	background: #fca32f; /* цвет ручки */
+	border-radius: 10px; /* скругление углов */
+	border: 2px solid #000000; /* создаем бордюр вокруг ручки */
+}
+
+/* Стиль ручки при наведении */
+::-webkit-scrollbar-thumb:hover {
+	background: #ff0000; /* цвет ручки при наведении */
+}

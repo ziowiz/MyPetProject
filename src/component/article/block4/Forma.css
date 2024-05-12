@@ -147,6 +147,7 @@ form p {
 		justify-content: space-evenly;
 	}
 }
+
 .useForm {
 	animation: inputAnimation 3s ease 0s 1 normal forwards;
 	text-shadow: var(--textShadow);
@@ -238,4 +239,24 @@ form p {
 	100% {
 		transform: translateX(0);
 	}
+}
+.chat-name_input {
+	padding: 8px;
+	margin: 8px auto 8px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	font-size: clamp(12px, 2vw, 18px);
+	width: 24%;
+	box-shadow: var(--boxShadow);
+	min-width: 50px;
+}
+.chat-form__input {
+	padding: 8px;
+	margin: 8px auto 8px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	font-size: clamp(12px, 2vw, 18px);
+	width: 48%;
+	box-shadow: var(--boxShadow);
+	min-width: 50px;
 }

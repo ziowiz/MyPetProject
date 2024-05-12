@@ -2,7 +2,6 @@ import styles from "./Todo.module.css";
 import { GiAbstract023, GiInterdiction, GiCheckMark } from "react-icons/gi";
 // Верхнее меню кнопка + форма
 function Todo({ todo, deleteTodo, toggleTodoHandler }) {
-	console.log(todo.text);
 	return (
 		<div
 			className={`${styles.todo} ${

@@ -34,6 +34,14 @@ module.exports = function (app) {
 		"/src/server",
 		createProxyMiddleware({
 			target: "http://localhost:80", // Указание на ваш PHP-сервер
+			pathRewrite: { "^/src": "" },
+			secure: false,
+		})
+	);
+	app.use(
+		"/src/server",
+		createProxyMiddleware({
+			target: "http://localhost:80", // Указание на ваш PHP-сервер
 			pathRewrite: { "^": "" },
 			secure: false,
 		})
